@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Gpadatastore2</servlet-name>
+		<servlet-class>com.agile.datastore.StoreServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Gpadatastore2</servlet-name>
+		<url-pattern>/StoreServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Gpadatastore3</servlet-name>
+		<servlet-class>com.agile.datastore.ShowCustomer</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Gpadatastore3</servlet-name>
+		<url-pattern>/ShowCustomer</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Gpadatastore4</servlet-name>
+		<servlet-class>com.agile.datastore.ActionnServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Gpadatastore4</servlet-name>
+		<url-pattern>/ActionnServlet</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>customerform.html</welcome-file>
+		<welcome-file>showcustomers.html</welcome-file>
+		<welcome-file>details.html</welcome-file>
+	</welcome-file-list>
+</web-app>

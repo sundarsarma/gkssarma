@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+</head> 
+<body>
+<form id="store" name="cusform" action="StoreServlet" method="post">
+enterid:<input type="text" name="cusid">
+entername:<input type="text" name="cusname">
+place:<input type="text" name="place">
+<input type="submit" value="submit" id="sbmt" onClick="">
+<table id="res" border="1">
+<tr>
+<th>customerid</th>
+<th>cname</th>
+<th>location</th>
+</tr>
+
+</table>
+
+ 
+</form>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ <script type="text/javascript">
+
+ var form = $('#store');
+ form.submit(function () {
+ $.ajax({
+ type: form.attr('method'),
+ url: form.attr('action'),
+ data: form.serialize(),
+ success: function (data) {
+	 alert("bdsj");
+ }
+	 var trHTML = '';
+     $.each(data, function (i, item) {
+         trHTML += '<tr><td>' + item.cusid + '</td><td>' + item.cusname + '</td><td>' + item.place + '</td></tr>';
+     });
+     $('#res').append(trHTML); 
+ }
+ });
+
+
+</script>
+</body>
+</html>

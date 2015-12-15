@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js">   
+        </script>
+        <script>
+            $(document).ready(function() {                        
+                $('#test').click(function(event) {  
+                	alert("hai");
+       
+                 $.get('ActionnServlet',function(responseText) { 
+                               
+                    });
+                });
+            });
+        </script>
+
+
+</head>
+<body>
+<button id="test">showdetails</button>
+</body>
+</html>
